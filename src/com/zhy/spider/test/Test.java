@@ -31,8 +31,8 @@ public class Test
 	    printf(extracts);
 	    Document doc;
 	    try {
-			doc = Jsoup.connect("http://news.xinhuanet.com/politics/2016-02/20/c_1118106530.htm").get();
-			Elements elements = doc.select("body");
+			doc = Jsoup.connect("http://news.sina.com.cn/c/sz/2016-02-22/doc-ifxprucu3111608.shtml").get();
+			Elements elements = doc.getElementsByAttributeValue("id", "artibody");
 			for(Element a:elements){
 				System.out.println(Html2Text(a.toString()).trim());
 			}
